@@ -1,2 +1,5 @@
 # myapp
 AI_application_sample
+
+YOLOを使用するのでプロジェクト配下にyolov8.ptをいれていること
+いったんは25MB以上あるので格納していない。

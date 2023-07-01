@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/GeneralStyle.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/MainPage.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/TrendPage.css' %}">
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</head>
+
+
+<body>
+    <nav class="navbar navbar-default sticky-top" id="titlebar">
+      <a href="{%url 'detection' %}" class="no-decoration">
+        <h3>detection</h3>
+      </a>
+  
+      <div id="option-wrapper">
+        <a href="{%url 'logout' %}">
+          <button type="button" id="white-button" class="btn btn-primary">
+            ログアウト
+          </button>
+        </a>
+      </div>
+    </nav>
+    <form action="{% url 'detection' %}" method="post" enctype="multipart/form-data">
+      <div class="modal-body">
+        {% csrf_token %}
+        {{dform}}
+        <input type="submit" value="アップロード" id="upload-button"><br>
+        <img src = "/static/media/output/mypredict/{{ img }}">
+      </div>
+    </form>
+  </body>
+  
+  </html>

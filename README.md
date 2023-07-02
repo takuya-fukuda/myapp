@@ -32,6 +32,10 @@ activate.bat
 ・仮想環境の停止  
 deactivate  
 
+・AI必要パッケージのインストール  
+今回であればYOLOv8を動かすのに必要なパッケージは  
+pip install -r requirements.txt  
+
 ・プロジェクトの作成(仮想環境上で）  
 django-admin startproject myproject  
 

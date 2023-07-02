@@ -52,5 +52,5 @@ python manage.py makemigrations myapp
 python manage.py migrate  
 
 (注意）
-YOLOを使用するのでプロジェクト配下にyolov8.ptをいれていること
-いったんは25MB以上あるので格納していない。
+YOLOを使用するのでプロジェクト配下にyolov8.ptをいれていること  
+いったんは25MB以上あるので格納していない。ultralytics/ultralytics配下のフォルダを格納してもよい
